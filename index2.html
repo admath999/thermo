@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamics Calculator</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+ <div class="app-picture">
+       <img src="main bg.png">
+    </div>
+    <div class="container">
+      <div class="menu">
+      <div class="popup-2" id="popup-2">
+        <div class="overlay-2">
+      </div>
+      <div class="content-2">
+      <div class="banner-2">
+        <div class="app-text-2">
+         <h1>Thermodynamics Calculator</h1>
+          <p><i>Enter the values with correct units.</i></p>
+        </div>
+
+    <form id="thermoForm">
+        <label for="pressure">Initial Pressure (P<sub>1</sub>):</label>
+        <input type="text" id="initialPressure" pattern="[0-9]+(\.[0-9]{1,9})?" required>
+        <select id="initialPressureUnit">
+            <option value="atm">atm</option>
+            <option value="mmHg">mmHg</option>
+            <option value="psi">psi</option>
+            <!-- Add more options for other units as needed -->
+        </select><br>
+        
+        <label for="finalPressure">Final Pressure (P<sub>2</sub>):</label>
+        <input type="text" id="finalPressure" pattern="[0-9]+(\.[0-9]{1,9})?" required>
+        <select id="finalPressureUnit">
+            <option value="atm">atm</option>
+            <option value="mmHg">mmHg</option>
+            <option value="psi">psi</option>
+            <!-- Add more options for other units as needed -->
+        </select><br>
+        
+        <label for="initialVolume">Initial Volume (V<sub>1</sub>):</label>
+        <input type="text" id="initialVolume" pattern="[0-9]+(\.[0-9]{1,9})?" required>
+        <select id="initialVolumeUnit">
+            <option value="liters">liters</option>
+            <option value="milliliters">milliliters</option>
+            <option value="cubic_meters">cubic meters</option>
+            <!-- Add more options for other units as needed -->
+        </select><br>
+        
+        <label for="finalVolume">Final Volume (V<sub>2</sub>):</label>
+        <input type="text" id="finalVolume" pattern="[0-9]+(\.[0-9]{1,9})?" required>
+        <select id="finalVolumeUnit">
+            <option value="liters">liters</option>
+            <option value="milliliters">milliliters</option>
+            <option value="cubic_meters">cubic meters</option>
+            <!-- Add more options for other units as needed -->
+        </select><br>
+        
+        <label for="initialTemperature">Initial Temperature (T<sub>1</sub>):</label>
+        <input type="text" id="initialTemperature" pattern="[0-9]+(\.[0-9]{1,9})?" required>
+        <select id="initialTemperatureUnit">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+            <!-- Add more options for other units as needed -->
+        </select><br>
+        
+        <label for="finalTemperature">Final Temperature (T<sub>2</sub>):</label>
+        <input type="text" id="finalTemperature" pattern="[0-9]+(\.[0-9]{1,9})?" required>
+        <select id="finalTemperatureUnit">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+            <!-- Add more options for other units as needed -->
+        </select><br>
+
+        <label for="moles">Number of Moles (n):</label>
+        <input type="text" id="moles" pattern="[0-9]+(\.[0-9]{1,9})?" required><br>
+        
+         <label for="Cp">Heat Capacity (Cp):</label>
+         <input type="text" id="Cp" pattern="[0-9]+(\.[0-9]{1,9})?" required><br>
+         
+         <label for="Cv">Heat Capacity (Cv):</label>
+         <input type="text" id="Cv" pattern="[0-9]+(\.[0-9]{1,9})?" required><br>
+
+        <label for="process">Process:</label>
+        <select id="process">
+            <option value="isothermal">Isothermal</option>
+            <option value="isobaric">Isobaric</option>
+            <option value="adiabatic">Adiabatic</option>
+            <option value="isochoric">Isochoric</option>
+        </select><br>
+        <br>
+        <button type="submit">Calculate</button>
+    </form>
+    
+    <p id="result"></p>
+
+    <script src="script1.js"></script>
+</body>
+</html>
